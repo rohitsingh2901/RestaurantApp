@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import RestaurantList from './RestaurantList';
+import DishList from './DishList';
+import Dish from './Dish';
+import Admin from './Admin'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='container '>
+        <div className='my-3 flex justify-center items-center'>
+      <Link to="/admin"><button className='btn btn-primary btn-sm mx-8'>Admin View</button></Link>
+      <Link to="/restaurant"><button className='btn btn-primary btn-sm mx-8'>Customer View</button></Link>
+      </div>
+        <Routes>
+          <Route path="/" element={<div><h1 className='text-center'>Welcome to Restaurant App</h1></div>} />
+          <Route path="/admin" element={<Admin/>} />
+          <Route path="/restaurant" element={<RestaurantList />} />
+          <Route path="/restaurant/:id" element={<DishList />} />
+          <Route path="/dish/:dishId" element={<Dish />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
