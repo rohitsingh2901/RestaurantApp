@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Restaurant Management Application 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a restaurant management application that allows users to view a list of restaurants, their details, available dishes, and more. The application is built using MongoDB for data storage and provides functionalities for both customers and administrators.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Customer View
 
-### `npm start`
+- **Browse Restaurants:** Users can view a list of restaurants, along with their names, addresses, phone numbers, and pictures.
+- **Restaurant Details:** Customers can see detailed information about a restaurant, including its title, subtitle, availability for food, and cuisines offered.
+- **Dish Information:** Customers can explore the dishes available in each restaurant, including dish name, description, veg/non-veg category, pictures, ingredients, and more.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Admin View
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Add Restaurants:** Administrators have the privilege to add new restaurants to the system. They can input restaurant details such as name, address, phone number, and list of pictures.
+- **Manage Dishes:** Admins can add, update, or delete dishes for a restaurant. Each dish can have a name, description, veg/non-veg category, pictures, ingredients, and other customizable fields.
+- **Delete Restaurants:** Administrators can also delete entire restaurants from the system.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the application locally, follow these steps:
 
-### `npm run build`
+1. Clone this repository to your local machine.
+   ```
+   git clone https://github.com/your-username/restaurant-management-app.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install the required dependencies.
+   ```
+   Change MongoURI = Your_MongoDB_URI
+   cd backend
+   node server
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Set up your MongoDB database and configure the connection in the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the application.
+   ```
+   npm run start
+   ```
 
-### `npm run eject`
+## Working Link
+https://rohitsingh2901.github.io/RestaurantApp/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- MongoDB: Used as the database to store restaurant and dish information.
+- Node.js: Provides the backend environment for the application.
+- Express.js: A web application framework for Node.js used to build RESTful APIs.
+- HTML/CSS: Used for frontend rendering and styling.
+- Bootstrap: Frontend framework for responsive and attractive UI.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Contributions are welcome! If you find any bugs or want to add new features, please submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
